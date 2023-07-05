@@ -1,3 +1,4 @@
+"use client";
 import useConversation from "@/app/hooks/useConversation";
 import clsx from "clsx";
 import { defaultConfig } from "next/dist/server/config-shared"
@@ -15,7 +16,7 @@ const ConversationList:React.FC<ConversationListProps> = ({
     initialItems
 }) => {
     const [items , setItems] = useState(initialItems);
-    const router = useRouter();
+    // const router = useRouter();
 
     const { conversationId, isOpen } = useConversation();
     

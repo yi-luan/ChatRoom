@@ -61,6 +61,9 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                         </p>
                         {lastMessage ?.createdAt && (<p> { format(new Date(lastMessage.createdAt),'p') }</p>)}
                     </div>
+                    <p className={clsx (`truncate text-sm`, hasSeen ? 'text-gray-500' : 'text-black font-medium')}>
+                        {lastMessageText}
+                    </p>
                 </div>
             </div>
         </div>
